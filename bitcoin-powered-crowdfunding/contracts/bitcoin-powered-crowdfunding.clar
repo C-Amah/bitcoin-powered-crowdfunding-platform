@@ -1,30 +1,8 @@
+ 
+ ;; Define the contract owner
+(define-constant contract-owner tx-sender)
 
-;; title: bitcoin-powered-crowdfunding
-;; version:
-;; summary:
-;; description:
-
-;; traits
-;;
-
-;; token definitions
-;;
-
-;; constants
-;;
-
-;; data vars
-;;
-
-;; data maps
-;;
-
-;; public functions
-;;
-
-;; read only functions
-;;
-
-;; private functions
-;;
-
+;; Define the contributions map
+(define-map contributions
+  (tuple (campaign-id uint) (backer principal))
+  uint)
