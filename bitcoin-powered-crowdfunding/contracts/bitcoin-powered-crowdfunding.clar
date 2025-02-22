@@ -14,3 +14,17 @@
 (define-constant err-goal-not-met (err u103))
 (define-constant err-already-funded (err u104))
 (define-constant err-invalid-amount (err u105))
+
+
+;; Define a map to store campaigns
+(define-map campaigns { campaign-id: uint }
+    {
+        creator: principal,
+        goal: uint,
+        raised: uint,
+        deadline: uint,
+        funded: bool
+    }
+)
+
+
