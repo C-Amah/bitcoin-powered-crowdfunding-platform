@@ -14,7 +14,9 @@
 (define-constant err-goal-not-met (err u103))
 (define-constant err-already-funded (err u104))
 (define-constant err-invalid-amount (err u105))
-
+(define-constant err-campaign-canceled (err u106))
+(define-constant err-milestone-not-achieved (err u107))
+(define-constant err-already-voted (err u108))
 
 ;; Define a map to store campaigns
 (define-map campaigns { campaign-id: uint }
@@ -27,4 +29,8 @@
     }
 )
 
+;; Define the milestone votes map
+(define-map milestone-votes
+  (tuple (campaign-id uint) (milestone-id uint) (voter principal))
+  bool)
 
